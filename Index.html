@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="builder">
+  <nav id="nav"></nav>
+  <main>
+    <h1 class="noprint">Build your resume</h1>
+    <p class="lead noprint">Fill in the details on the left. The preview updates as you type and saves automatically in this browser.</p>
+
+    <div class="grid">
+      <section class="panel noprint" aria-label="Resume details">
+        <label for="template">Template</label>
+        <select id="template"></select>
+
+        <label for="name">Full name</label>
+        <input id="name" autocomplete="name">
+        <label for="title">Job title</label>
+        <input id="title" placeholder="e.g. Software Engineering Intern">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" autocomplete="tel">
+        <label for="location">Location</label>
+        <input id="location" placeholder="City, Country">
+        <label for="links">Links</label>
+        <input id="links" placeholder="github.com/yourname">
+
+        <label for="summary">Summary</label>
+        <textarea id="summary"></textarea>
+        <label for="education">Education</label>
+        <textarea id="education"></textarea>
+        <p class="hint">One item per line.</p>
+        <label for="skills">Skills</label>
+        <textarea id="skills"></textarea>
+        <p class="hint">Separate skills with commas.</p>
+        <label for="projects">Projects</label>
+        <textarea id="projects"></textarea>
+        <p class="hint">One item per line.</p>
+        <label for="experience">Experience</label>
+        <textarea id="experience"></textarea>
+        <p class="hint">One item per line.</p>
+
+        <div class="row">
+          <button id="print" type="button">Download as PDF</button>
+          <button id="clear" type="button" class="ghost">Clear all</button>
+        </div>
+      </section>
+
+      <section aria-label="Resume preview">
+        <div id="preview"></div>
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
